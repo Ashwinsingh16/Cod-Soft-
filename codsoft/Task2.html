@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatLit - Fashion at Its Best</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f8f9fa;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+
+        body.dark-mode {
+            background: #121212;
+            color: #ddd;
+        }
+
+        header {
+            background: linear-gradient(90deg, #ff7e5f, #feb47b);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        body.dark-mode header {
+            background: linear-gradient(90deg, #333, #555);
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .container-wrapper {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+            background: #fff;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            margin-top: -60px; /* To pull it closer to the header */
+        }
+
+        body.dark-mode .container-wrapper {
+            background-color: #181818;
+        }
+
+        .section, .features, .about, .testimonials {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        body.dark-mode .section,
+        body.dark-mode .features,
+        body.dark-mode .about,
+        body.dark-mode .testimonials {
+            background-color: #222;
+            color: #ddd; /* Fixing text readability in dark mode */
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        body.dark-mode footer {
+            background: #111;
+        }
+
+        #dark-mode-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #ff7e5f;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1.5em;
+            transition: 0.3s;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        #dark-mode-toggle:hover {
+            background-color: #e76f51;
+            transform: scale(1.1);
+        }
+
+        .cta {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #ff7e5f;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            transition: 0.3s;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta:hover {
+            background: #e76f51;
+            transform: scale(1.05);
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature-box {
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            border-radius: 10px;
+            text-align: center;
+            flex: 1 1 30%;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .section {
+            background: #f0f0f0;
+        }
+
+        body.dark-mode .section {
+            background: #333;
+        }
+
+        .about {
+            background: #e9ecef;
+        }
+
+        body.dark-mode .about {
+            background: #444;
+        }
+
+        .testimonials {
+            background: #f8f9fa;
+        }
+
+        body.dark-mode .testimonials {
+            background: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>WeatLit</h1>
+        <p>Fashion at Its Best - Where Style Meets Comfort</p>
+        <button id="dark-mode-toggle">🌙</button>
+    </header>
+    
+    <div class="container-wrapper">
+        <section class="section">
+            <h2>Why WeatLit?</h2>
+            <p>At WeatLit, we offer the finest fashion dresses that blend contemporary designs with timeless elegance. Our goal is to make you feel stylish and confident every day.</p>
+            <a href="#shop" class="cta">Explore Our Collection</a>
+        </section>
+        
+        <section class="features">
+            <div class="feature-box">
+                <h3>Premium Quality</h3>
+                <p>We use the finest fabrics and materials to ensure that every piece is comfortable, durable, and of the highest quality.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Timeless Designs</h3>
+                <p>Our dresses are crafted to reflect classic styles while embracing modern trends, ensuring you always look chic.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Affordable Luxury</h3>
+                <p>We believe that luxury fashion should be accessible. Our pieces offer exceptional quality at prices you'll love.</p>
+            </div>
+        </section>
+        
+        <section class="about">
+            <h2>About WeatLit</h2>
+            <p>WeatLit was founded with a passion for bringing sophisticated yet affordable fashion to all. Our commitment to excellence and customer satisfaction makes us a trusted name in the fashion industry.</p>
+        </section>
+        
+        <section class="testimonials">
+            <h2>What Our Clients Say</h2>
+            <p class="testimonial">"The dress I purchased was absolutely stunning! It fit perfectly and felt so comfortable." - Emily R.</p>
+            <p class="testimonial">"WeatLit has my heart! Their customer service and quality are unmatched." - Olivia M.</p>
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 WeatLit. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const darkModeToggle = document.getElementById("dark-mode-toggle");
+        darkModeToggle.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+        });
+    </script>
+</body>
+</html>
